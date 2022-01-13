@@ -17,13 +17,32 @@
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
-}
+                width: 40rem;
+                height: 40rem;
+            }
         </style>
     </head>
     <body>
         <h1>small hats</h1>
-        <img class="fit-picture"
-        src="images/amogus-the-sus-lord_2.png" 
-        alt="sussy amogus">
+        <img id="animal" src="images/animals/rat/neutral_rat.png" alt="rat is feeling neutral"/>
+        <button id="happy">happy</button>
+        <button id="neutral">neutral</button>
+        <button id="sad">sad</button>
+        <script>
+            const animalImage = document.getElementById("animal");
+            const happyButton = document.getElementById("happy");
+            const neutralButton = document.getElementById("neutral");
+            const sadButton = document.getElementById("sad");
+
+            happyButton.onclick = function () {
+                animalImage.src = "images/animals/rat/happy_rat.png";
+            }
+            neutralButton.onclick = function () {
+                animalImage.src = "images/animals/rat/neutral_rat.png";
+            }
+            sadButton.onclick = function () {
+                animalImage.src = "images/animals/rat/sad_rat.png";
+            }
+        </script>
     </body>
 </html>
